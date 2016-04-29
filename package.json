@@ -8,7 +8,8 @@
     "dev": "webpack --config build/webpack.config.js",
     "test": "npm run unit",
     "unit": "karma start build/karma.unit.config.js",
-    "cover": "karma start build/karma.cover.config.js"
+    "cover": "karma start build/karma.cover.config.js",
+    "sauce": "karma start build/karma.sauce.config.js"
   },
   "author": "Lelouch He <lelouchhe@gmail.com>",
   "license": "MIT",
@@ -25,6 +26,7 @@
     "karma-coverage": "^0.5.5",
     "karma-jasmine": "^0.3.8",
     "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sauce-launcher": "^0.3.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "object-assign": "^4.0.1",

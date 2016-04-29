@@ -8,6 +8,7 @@ module.exports = function(config) {
         reporters: ['progress', 'coverage'],
         coverageReporter: {
             reporters: [
+                // subdir used to remove browser-specific folder
                 { type: 'lcov', dir: '../coverage', subdir: '.' },
                 { type: 'text-summary', dir: '../coverage', subdir: '.' }
             ]
@@ -17,7 +18,7 @@ module.exports = function(config) {
     options.webpack.module.postLoaders = [
         {
             test: /\.js$/,
-            exclude: /node_modules/,
+            exclude: /test|node_modules/,
             loader: 'istanbul-instrumenter'
         }
     ];
