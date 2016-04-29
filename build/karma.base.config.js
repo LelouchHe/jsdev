@@ -3,9 +3,7 @@ var webpackConfig = require('./webpack.config');
 delete webpackConfig.entry;
 webpackConfig.devtool = 'inline-source-map';
 
-module.exports = function(config) {
-  config.set({
-    basePath: '',
+module.exports = {
     frameworks: ['jasmine'],
     files: [
       '../test/index.js'
@@ -13,12 +11,11 @@ module.exports = function(config) {
     preprocessors: {
         '../test/index.js': ['webpack', 'sourcemap']
     },
-    webpack: webpackConfig,
 
+    webpack: webpackConfig,
     webpackMiddleware: {
         noInfo: true
     },
-    browsers: ['Chrome'],
+
     singleRun: true,
-  })
 }
