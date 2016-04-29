@@ -1,15 +1,15 @@
 
-var webpackConfig = require('./webpack.config');
+var webpackConfig = require('./webpack.test.config');
 delete webpackConfig.entry;
 webpackConfig.devtool = 'inline-source-map';
 
 module.exports = {
     frameworks: ['jasmine'],
     files: [
-      '../test/index.js'
+      '../test/unit/specs/index.js'
     ],
     preprocessors: {
-        '../test/index.js': ['webpack', 'sourcemap']
+        '../test/unit/specs/index.js': ['webpack', 'sourcemap']
     },
 
     webpack: webpackConfig,

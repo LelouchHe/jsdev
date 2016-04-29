@@ -1,5 +1,5 @@
 
-import add from "../src/index";
+import add from "src/add";
 
 describe("unit test", function (){
     it("spec", function() {

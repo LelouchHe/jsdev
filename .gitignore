@@ -6,3 +6,4 @@ coverage/
 *.map
 *.log
 
+test/unit/specs.js

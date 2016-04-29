@@ -4,7 +4,7 @@ var rollup = require('rollup');
 var uglify = require('uglify-js');
 var babel = require('rollup-plugin-babel');
 var package = require("../package.json");
-var name = process.env.VERSION || package.name;
+var name = package.name;
 
 var distPath = 'dist';
 var libFilename = distPath + '/' + name + '.js';
