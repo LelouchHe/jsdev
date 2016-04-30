@@ -6,10 +6,10 @@ webpackConfig.devtool = 'inline-source-map';
 module.exports = {
     frameworks: ['jasmine'],
     files: [
-      '../test/unit/specs/index.js'
+      '../test/unit/index.js'
     ],
     preprocessors: {
-        '../test/unit/specs/index.js': ['webpack', 'sourcemap']
+        '../test/unit/index.js': ['webpack', 'sourcemap']
     },
 
     webpack: webpackConfig,
